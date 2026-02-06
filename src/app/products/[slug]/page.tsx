@@ -10,6 +10,13 @@ import styles from './productDetail.module.css';
 import { products, shops, categories } from '@/data/mockData';
 import { useCart } from '@/context/CartContext';
 
+// Generate static params for all products
+export function generateStaticParams() {
+    return products.map((product) => ({
+        slug: product.slug,
+    }));
+}
+
 const fadeIn = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },

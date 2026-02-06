@@ -3,9 +3,16 @@
 import { use, useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Package, FileText, Clipboard, Truck, MessageCircle, Info } from 'lucide-react';
+import { ArrowLeft, MessageCircle, Clock, DollarSign, Send, Package, FileText, Clipboard, Truck, Info } from 'lucide-react';
 import styles from './serviceDetail.module.css';
 import { services, Service, ServiceField } from '@/data/mockData';
+
+// Generate static params for all services
+export function generateStaticParams() {
+    return services.map((service) => ({
+        slug: service.slug,
+    }));
+}
 
 const serviceIcons: Record<string, React.ReactNode> = {
     'pick-drop': <Package size={40} />,

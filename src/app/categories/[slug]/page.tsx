@@ -3,9 +3,17 @@
 import { use } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Star, ShoppingBag, Plus } from 'lucide-react';
+import { ArrowLeft, ShoppingCart, Star, Plus, ShoppingBag } from 'lucide-react';
 import styles from './categoryProducts.module.css';
-import { categories, products } from '@/data/mockData';
+import { products, categories } from '@/data/mockData';
+import { useCart } from '@/context/CartContext';
+
+// Generate static params for all categories
+export function generateStaticParams() {
+    return categories.map((category) => ({
+        slug: category.slug,
+    }));
+}
 
 const fadeInUp = {
     initial: { opacity: 0, y: 30 },

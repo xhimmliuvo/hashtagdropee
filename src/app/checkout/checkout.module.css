@@ -1,0 +1,231 @@
+.checkoutPage {
+    min-height: 100vh;
+    padding: var(--space-4) 0 var(--space-16);
+}
+
+.backLink {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-4) 0;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    color: var(--color-text-secondary);
+    transition: color var(--transition-fast);
+}
+
+.backLink:hover {
+    color: var(--color-accent);
+}
+
+.emptyCart {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emptyContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-4);
+    color: var(--color-text-muted);
+}
+
+.emptyContent h1 {
+    font-size: var(--fs-2xl);
+    color: var(--color-text-primary);
+}
+
+.checkoutLayout {
+    display: grid;
+    gap: var(--space-8);
+}
+
+@media (min-width: 1024px) {
+    .checkoutLayout {
+        grid-template-columns: 1fr 400px;
+        align-items: start;
+    }
+}
+
+/* Form Section */
+.formSection {
+    background: var(--gradient-card);
+    border-radius: var(--radius-xl);
+    border: 1px solid hsla(220, 10%, 50%, 0.1);
+    padding: var(--space-8);
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-2xl);
+    font-weight: var(--fw-bold);
+    margin-bottom: var(--space-2);
+}
+
+.subtitle {
+    font-size: var(--fs-base);
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-8);
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+}
+
+.formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.label {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+    color: var(--color-text-secondary);
+}
+
+.textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* Promo Section */
+.promoSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-5);
+    background: var(--color-bg-tertiary);
+    border-radius: var(--radius-lg);
+}
+
+.promoInput {
+    display: flex;
+    gap: var(--space-3);
+}
+
+.promoInput .input {
+    flex: 1;
+}
+
+.promoBtn {
+    padding: var(--space-3) var(--space-5);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
+    color: var(--color-accent);
+    background: var(--color-accent-glow);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+}
+
+.promoBtn:hover {
+    background: var(--color-accent);
+    color: var(--color-bg-primary);
+}
+
+.promoApplied {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--fs-sm);
+    color: var(--color-success);
+}
+
+.submitBtn {
+    width: 100%;
+    padding: var(--space-4);
+    font-size: var(--fs-base);
+    margin-top: var(--space-4);
+}
+
+.submitBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Summary Section */
+.summarySection {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-4));
+    background: var(--gradient-card);
+    border-radius: var(--radius-xl);
+    border: 1px solid hsla(220, 10%, 50%, 0.1);
+    padding: var(--space-6);
+}
+
+.summaryTitle {
+    font-family: var(--font-heading);
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-bold);
+    margin-bottom: var(--space-6);
+}
+
+.itemsList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding-bottom: var(--space-6);
+    margin-bottom: var(--space-6);
+    border-bottom: 1px solid hsla(220, 10%, 50%, 0.15);
+}
+
+.summaryItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.itemInfo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.itemName {
+    font-size: var(--fs-sm);
+    color: var(--color-text-primary);
+}
+
+.itemQty {
+    font-size: var(--fs-xs);
+    color: var(--color-text-muted);
+}
+
+.itemPrice {
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-medium);
+}
+
+.summaryRows {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.summaryRow {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--fs-sm);
+    color: var(--color-text-secondary);
+}
+
+.promoRow {
+    color: var(--color-success);
+}
+
+.totalRow {
+    padding-top: var(--space-4);
+    border-top: 1px solid hsla(220, 10%, 50%, 0.15);
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-bold);
+    color: var(--color-text-primary);
+}

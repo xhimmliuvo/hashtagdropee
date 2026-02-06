@@ -1,0 +1,135 @@
+.shopsPage {
+    min-height: 100vh;
+    padding: var(--space-8) 0 var(--space-16);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--space-12);
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-4xl);
+    font-weight: var(--fw-bold);
+    margin-bottom: var(--space-3);
+}
+
+.subtitle {
+    font-size: var(--fs-lg);
+    color: var(--color-text-secondary);
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.shopsGrid {
+    display: grid;
+    gap: var(--space-4);
+}
+
+@media (min-width: 768px) {
+    .shopsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .shopsGrid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.shopCard {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    padding: var(--space-5);
+    background: var(--gradient-card);
+    border-radius: var(--radius-xl);
+    border: 1px solid hsla(220, 10%, 50%, 0.1);
+    transition: all var(--transition-fast);
+}
+
+.shopCard:hover {
+    border-color: var(--color-accent);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.shopCard:hover .arrow {
+    transform: translateX(4px);
+    color: var(--color-accent);
+}
+
+.shopLogo {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-lg);
+    background: var(--gradient-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-2xl);
+    color: var(--color-bg-primary);
+    flex-shrink: 0;
+}
+
+.shopContent {
+    flex: 1;
+    min-width: 0;
+}
+
+.shopName {
+    font-size: var(--fs-lg);
+    font-weight: var(--fw-semibold);
+    margin-bottom: var(--space-2);
+}
+
+.shopMeta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-2);
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-size: var(--fs-sm);
+    color: var(--color-text-secondary);
+}
+
+.shopInfo {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+}
+
+.deliveryFee {
+    color: var(--color-accent);
+    font-weight: var(--fw-medium);
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+.arrow {
+    color: var(--color-text-muted);
+    transition: all var(--transition-fast);
+    flex-shrink: 0;
+}

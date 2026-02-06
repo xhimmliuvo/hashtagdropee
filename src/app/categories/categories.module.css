@@ -1,0 +1,124 @@
+.categoriesPage {
+    min-height: 100vh;
+}
+
+.header {
+    padding: var(--space-12) 0;
+    background: var(--gradient-hero);
+    text-align: center;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: var(--fw-bold);
+    margin-bottom: var(--space-3);
+}
+
+.subtitle {
+    font-size: var(--fs-lg);
+    color: var(--color-text-secondary);
+}
+
+.categoriesSection {
+    padding: var(--space-12) 0 var(--space-16);
+}
+
+.grid {
+    display: grid;
+    gap: var(--space-6);
+}
+
+@media (min-width: 640px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.card {
+    display: flex;
+    gap: var(--space-6);
+    padding: var(--space-8);
+    background: var(--gradient-card);
+    border-radius: var(--radius-xl);
+    border: 1px solid hsla(220, 10%, 50%, 0.1);
+    transition: all var(--transition-spring);
+}
+
+.card:hover {
+    transform: translateY(-4px) scale(1.01);
+    border-color: hsla(160, 85%, 50%, 0.3);
+    box-shadow: var(--shadow-glow);
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.cardIcon {
+    width: 88px;
+    height: 88px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    background: var(--color-accent-glow);
+    color: var(--color-accent);
+    border-radius: var(--radius-xl);
+}
+
+.cardContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.cardTitle {
+    font-size: var(--fs-xl);
+    font-weight: var(--fw-bold);
+    margin-bottom: var(--space-2);
+}
+
+.cardDescription {
+    font-size: var(--fs-base);
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: var(--space-4);
+    flex: 1;
+}
+
+.cardFooter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 480px) {
+    .cardFooter {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+}
+
+.productCount {
+    font-size: var(--fs-sm);
+    color: var(--color-text-muted);
+}
+
+.cardLink {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-semibold);
+    color: var(--color-accent);
+    transition: gap var(--transition-fast);
+}
+
+.card:hover .cardLink {
+    gap: var(--space-3);
+}

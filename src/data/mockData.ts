@@ -31,6 +31,7 @@ export interface Product {
     categoryId: string;
     shopId: string;
     rating: number;
+    reviewCount: number;
     availability: boolean;
 }
 
@@ -137,6 +138,7 @@ export const products: Product[] = [
         categoryId: '1',
         shopId: '1',
         rating: 4.7,
+        reviewCount: 125,
         availability: true,
     },
     {
@@ -149,6 +151,7 @@ export const products: Product[] = [
         categoryId: '2',
         shopId: '2',
         rating: 4.5,
+        reviewCount: 89,
         availability: true,
     },
     {
@@ -162,6 +165,7 @@ export const products: Product[] = [
         categoryId: '3',
         shopId: '3',
         rating: 4.9,
+        reviewCount: 47,
         availability: true,
     },
     {
@@ -174,6 +178,7 @@ export const products: Product[] = [
         categoryId: '1',
         shopId: '1',
         rating: 4.8,
+        reviewCount: 203,
         availability: true,
     },
 ];
